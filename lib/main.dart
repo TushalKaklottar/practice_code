@@ -3,6 +3,8 @@ import 'package:untitled/modules/row/row_view.dart';
 import 'core/app_color.dart';
 import 'modules/column/column_widget.dart';
 import 'modules/home/home_view.dart';
+import 'modules/listView/listView_widget.dart';
+import 'modules/stack/stack_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => const MyHomePage(),
         '/columnWidget': (context) => const ColumnWidget(),
         '/row': (context) => const RowView(),
+        '/stack': (context) => const StackView(),
+        '/listView': (context) => const ListviewWidget(),
       },
     );
   }
