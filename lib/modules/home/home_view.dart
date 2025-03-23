@@ -50,13 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 CustomButton(
                   title: "Row Widget",
                   onPressed: () {
-                    Navigator.pushNamed(
-                        context,
-                        ''
-                        ''
-                        ''
-                        ''
-                        '/row');
+                    Navigator.pushNamed(context, '/row');
                   },
                 ),
               ],
