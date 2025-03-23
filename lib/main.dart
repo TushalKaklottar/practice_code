@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/modules/row/row_view.dart';
 import 'core/app_color.dart';
+import 'modules/column/column_widget.dart';
 import 'modules/home/home_view.dart';
 
 void main() {
@@ -18,7 +20,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MyHomePage(),
+        '/columnWidget': (context) => const ColumnWidget(),
+        '/row': (context) => const RowView(),
+      },
     );
   }
 }

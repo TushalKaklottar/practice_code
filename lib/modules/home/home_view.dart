@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/core/app_color.dart';
 
-import '../../widgtes/custom_button.dart';
-import '../column/column_widget.dart';
+import '../../widgets/custom_button.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -17,13 +16,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(
-          Icons.arrow_back_rounded,
+          Icons.menu_open_rounded,
           color: AppColors.background,
         ),
+        centerTitle: true,
         backgroundColor: AppColors.primary,
         title: const Text(
           "My App",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: AppColors.background),
         ),
         actions: [
           IconButton(
@@ -44,22 +44,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 CustomButton(
                   title: "Column Widget",
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const columnWidget()),
-                    );
+                    Navigator.pushNamed(context, '/columnWidget');
                   },
                 ),
                 CustomButton(
                   title: "Row Widget",
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const columnWidget(),
-                      ),
-                    );
+                    Navigator.pushNamed(
+                        context,
+                        ''
+                        ''
+                        ''
+                        ''
+                        '/row');
                   },
                 ),
               ],
