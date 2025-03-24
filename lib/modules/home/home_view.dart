@@ -47,26 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 );
               }).toList(),
-              // children: [
-              //   CustomButton(
-              //     title: "Column Widget",
-              //     onPressed: () {
-              //       Navigator.pushNamed(context, '/columnWidget');
-              //     },
-              //   ),
-              //   CustomButton(
-              //     title: "Row Widget",
-              //     onPressed: () {
-              //       Navigator.pushNamed(context, '/row');
-              //     },
-              //   ),
-              //   CustomButton(
-              //     title: "Stack Widget",
-              //     onPressed: () {
-              //       Navigator.pushNamed(context, '/stack');
-              //     },
-              //   ),
-              // ],
             ),
           )),
     );
