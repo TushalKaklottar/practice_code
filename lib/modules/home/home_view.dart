@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/core/app_color.dart';
-
 import '../../widgets/custom_button.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -40,28 +39,43 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                CustomButton(
-                  title: "Column Widget",
+              children: buttonList.map((button) {
+                return CustomButton(
+                  title: button['title'],
                   onPressed: () {
-                    Navigator.pushNamed(context, '/columnWidget');
+                    Navigator.pushNamed(context, button['route'] ?? "");
                   },
-                ),
-                CustomButton(
-                  title: "Row Widget",
-                  onPressed: () {
-                    Navigator.pushNamed(
-                        context,
-                        ''
-                        ''
-                        ''
-                        ''
-                        '/row');
-                  },
-                ),
-              ],
+                );
+              }).toList(),
+              // children: [
+              //   CustomButton(
+              //     title: "Column Widget",
+              //     onPressed: () {
+              //       Navigator.pushNamed(context, '/columnWidget');
+              //     },
+              //   ),
+              //   CustomButton(
+              //     title: "Row Widget",
+              //     onPressed: () {
+              //       Navigator.pushNamed(context, '/row');
+              //     },
+              //   ),
+              //   CustomButton(
+              //     title: "Stack Widget",
+              //     onPressed: () {
+              //       Navigator.pushNamed(context, '/stack');
+              //     },
+              //   ),
+              // ],
             ),
           )),
     );
   }
 }
+
+final List<Map<String, String>> buttonList = [
+  {'title': 'Column Widget', 'route': '/columnWidget'},
+  {'title': 'Row Widget', 'route': '/row'},
+  {'title': 'Stack Widget', 'route': '/stack'},
+  {'title': 'ListView', 'route': '/listView'},
+];
