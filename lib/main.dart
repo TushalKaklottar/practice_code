@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/modules/expanded/expanded_View.dart';
 import 'package:untitled/modules/row/row_view.dart';
+import 'package:untitled/modules/stateless_widget/stateless_view.dart';
 import 'core/app_color.dart';
 import 'modules/column/column_widget.dart';
+import 'modules/container_sizedBox/container_sizedBox.dart';
+import 'modules/flexible/flexible_view.dart';
 import 'modules/home/home_view.dart';
 import 'modules/listView/listView_widget.dart';
 import 'modules/stack/stack_view.dart';
@@ -29,6 +33,10 @@ class MyApp extends StatelessWidget {
         '/row': (context) => const RowView(),
         '/stack': (context) => const StackView(),
         '/listView': (context) => const ListviewWidget(),
+        '/statelessView': (context) => LessView(),
+        '/SizedVsContainer': (context) => const SizedVsContainer(),
+        '/ExpandedView': (context) => const ExpandedView(),
+        '/FlexibleView': (context) => const FlexibleView(),
       },
     );
   }

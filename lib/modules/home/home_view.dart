@@ -34,21 +34,22 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         actionsIconTheme: const IconThemeData(color: AppColors.background),
       ),
-      body: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: buttonList.map((button) {
-                return CustomButton(
-                  title: button['title'],
-                  onPressed: () {
-                    Navigator.pushNamed(context, button['route'] ?? "");
-                  },
-                );
-              }).toList(),
-            ),
-          )),
+      body: SingleChildScrollView(
+        child: Align(
+          alignment: Alignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: buttonList.map((button) {
+              return CustomButton(
+                title: button['title'],
+                onPressed: () {
+                  Navigator.pushNamed(context, button['route'] ?? "");
+                },
+              );
+            }).toList(),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -58,4 +59,8 @@ final List<Map<String, String>> buttonList = [
   {'title': 'Row Widget', 'route': '/row'},
   {'title': 'Stack Widget', 'route': '/stack'},
   {'title': 'ListView', 'route': '/listView'},
+  {'title': 'stateLess', 'route': '/statelessView'},
+  {'title': 'SizedVsContainer', 'route': '/SizedVsContainer'},
+  {'title': 'Expanded', 'route': '/ExpandedView'},
+  {'title': 'Flexible', 'route': '/FlexibleView'},
 ];

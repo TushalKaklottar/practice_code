@@ -14,27 +14,23 @@ class StackView extends StatelessWidget {
         backgroundColor: AppColors.oranges,
         title: const Text("Stack"),
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Stack(
-          children: [
-            CustomContainer(
-              color: AppColors.primary,
-              width: 200,
-              height: 200,
-            ),
-            CustomContainer(
-              color: AppColors.error,
-              width: 150,
-              height: 150,
-            ),
-            CustomContainer(
-              color: AppColors.oranges,
+      body: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 300,
+            color: Colors.blue,
+          ),
+          Positioned(
+            top: 50,
+            left: 50,
+            child: Container(
               width: 100,
               height: 100,
+              color: Colors.red,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
