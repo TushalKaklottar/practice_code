@@ -35,6 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
         actionsIconTheme: const IconThemeData(color: AppColors.background),
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(
+            decelerationRate: ScrollDecelerationRate.fast),
         child: Align(
           alignment: Alignment.center,
           child: Column(
@@ -63,4 +65,9 @@ final List<Map<String, String>> buttonList = [
   {'title': 'SizedVsContainer', 'route': '/SizedVsContainer'},
   {'title': 'Expanded', 'route': '/ExpandedView'},
   {'title': 'Flexible', 'route': '/FlexibleView'},
+  {'title': 'GridWidget', 'route': '/gridWidget'},
+  {'title': 'AspectRatio', 'route': '/AspectRatio'},
+  {'title': 'HeroWidget', 'route': '/HeroWidget'},
+  {'title': 'IntrinsicWidget', 'route': '/IntrinsicWidget'},
+  {'title': 'TextWidget', 'route': '/textWidget'},
 ];
