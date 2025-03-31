@@ -6,6 +6,10 @@ class ToolTipWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("ToolTip / Wrap"),
+        backgroundColor: Colors.orange,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -38,11 +42,16 @@ class ToolTipWidget extends StatelessWidget {
               child:
                   const Text("Hover over me", style: TextStyle(fontSize: 18)),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             const Wrap(
               spacing: 10, // Horizontal gap
               runSpacing: 10, // Vertical gap
               children: [
-                Chip(label: Text("Flutter Dart Flutter")),
+                Chip(
+                  label: Text("Flutter Dart Flutter"),
+                ),
                 Chip(label: Text("Dart")),
                 Chip(label: Text("GetX")),
                 Chip(label: Text("Firebase")),
