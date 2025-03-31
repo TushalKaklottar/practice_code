@@ -26,39 +26,43 @@ class RowView extends StatelessWidget {
         padding: EdgeInsets.all(heights * 0.008),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Row(
-            verticalDirection: VerticalDirection.up,
-            children: [
-              CustomContainer(
-                color: AppColors.error,
-                width: widths * 0.30,
-                height: heights * 0.15,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              CustomContainer(
-                color: AppColors.primary,
-                width: widths * 0.30,
-                height: heights * 0.15,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              CustomContainer(
-                color: AppColors.secondary,
-                width: widths * 0.30,
-                height: heights * 0.15,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              CustomContainer(
-                color: AppColors.oranges,
-                width: widths * 0.30,
-                height: heights * 0.15,
-              ),
-            ],
+          child: IntrinsicHeight(
+            child: Row(
+              verticalDirection: VerticalDirection.up,
+              children: [
+                CustomContainer(
+                  color: AppColors.error,
+                  width: widths * 0.30,
+                  height: heights * 0.15,
+                ),
+                const VerticalDivider(
+                  color: Colors.black,
+                  thickness: 5,
+                  width: 4,
+                ),
+                CustomContainer(
+                  color: AppColors.primary,
+                  width: widths * 0.30,
+                  height: heights * 0.15,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                CustomContainer(
+                  color: AppColors.secondary,
+                  width: widths * 0.30,
+                  height: heights * 0.15,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                CustomContainer(
+                  color: AppColors.oranges,
+                  width: widths * 0.30,
+                  height: heights * 0.15,
+                ),
+              ],
+            ),
           ),
         ),
       ),

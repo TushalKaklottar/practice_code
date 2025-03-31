@@ -14,6 +14,7 @@ import 'modules/home/home_view.dart';
 import 'modules/listView/listView_widget.dart';
 import 'modules/stack/stack_view.dart';
 import 'modules/text/text_widget.dart';
+import 'modules/toolTip_wrap/tool_wrap.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         '/HeroWidget': (context) => const HeroWidget(),
         '/IntrinsicWidget': (context) => const IntrinsicWidget(),
         '/textWidget': (context) => const TextWidget(),
+        '/toolTip_wrap': (context) => const ToolTipWidget(),
       },
     );
   }

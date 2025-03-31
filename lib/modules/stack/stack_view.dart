@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/core/app_color.dart';
-import 'package:untitled/widgets/custom_container.dart';
 
 class StackView extends StatelessWidget {
   const StackView({super.key});
@@ -24,10 +23,28 @@ class StackView extends StatelessWidget {
           Positioned(
             top: 50,
             left: 50,
-            child: Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
+            child: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30),
+              ),
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.red,
+              ),
+            ),
+          ),
+          Positioned(
+            top: 170,
+            left: 50,
+            child: Transform.rotate(
+              angle: 2,
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.red,
+              ),
             ),
           ),
         ],

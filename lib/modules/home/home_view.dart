@@ -34,21 +34,24 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         actionsIconTheme: const IconThemeData(color: AppColors.background),
       ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(
-            decelerationRate: ScrollDecelerationRate.fast),
-        child: Align(
-          alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: buttonList.map((button) {
-              return CustomButton(
-                title: button['title'],
-                onPressed: () {
-                  Navigator.pushNamed(context, button['route'] ?? "");
-                },
-              );
-            }).toList(),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 10, bottom: 10),
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(
+              decelerationRate: ScrollDecelerationRate.fast),
+          child: Align(
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: buttonList.map((button) {
+                return CustomButton(
+                  title: button['title'],
+                  onPressed: () {
+                    Navigator.pushNamed(context, button['route'] ?? "");
+                  },
+                );
+              }).toList(),
+            ),
           ),
         ),
       ),
@@ -70,4 +73,5 @@ final List<Map<String, String>> buttonList = [
   {'title': 'HeroWidget', 'route': '/HeroWidget'},
   {'title': 'IntrinsicWidget', 'route': '/IntrinsicWidget'},
   {'title': 'TextWidget', 'route': '/textWidget'},
+  {'title': 'ToolTip', 'route': '/toolTip_wrap'},
 ];

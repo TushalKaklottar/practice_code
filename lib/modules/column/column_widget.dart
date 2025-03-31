@@ -14,36 +14,37 @@ class ColumnWidget extends StatelessWidget {
         backgroundColor: AppColors.lightYellow,
         title: const Text("Column"),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(heights * 0.010),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomContainer(
-                color: AppColors.oranges,
-                height: heights * 0.30,
-                width: double.infinity,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomContainer(
-                color: AppColors.primary,
-                height: heights * 0.30,
-                width: double.infinity,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomContainer(
-                color: AppColors.greens,
-                height: heights * 0.30,
-                width: double.infinity,
-              ),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomContainer(
+              color: AppColors.oranges,
+              height: heights * 0.30,
+              width: double.infinity,
+            ),
+            const Divider(
+              thickness: 4,
+              color: Colors.black,
+              height: 4,
+            ),
+            CustomContainer(
+              color: AppColors.primary,
+              height: heights * 0.30,
+              width: double.infinity,
+            ),
+            const Divider(
+              thickness: 4,
+              color: Colors.black,
+              height: 4,
+            ),
+            CustomContainer(
+              color: AppColors.greens,
+              height: heights * 0.30,
+              width: double.infinity,
+            ),
+          ],
         ),
       ),
     );
