@@ -19,19 +19,20 @@ class _ExpandedViewState extends State<ExpandedView> {
       ),
       body: Row(
         children: [
-          Container(
-            color: Colors.orange,
-            child: const Center(child: Text('Fixed')),
+          Expanded(
+            child: Container(
+              color: Colors.orange,
+              width: 100,
+              child: const Center(child: Text('Fixed')),
+            ),
           ),
           Expanded(
-            flex: 4,
             child: Container(
               color: Colors.amberAccent,
               child: const Center(child: Text('Expanded')),
             ),
           ),
           Expanded(
-            flex: 6,
             child: Container(
               color: Colors.green,
               child: const Center(child: Text('Fixed')),

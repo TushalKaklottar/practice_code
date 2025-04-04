@@ -110,4 +110,5 @@ final List<Map<String, String>> buttonList = [
   {'title': 'IntrinsicWidget', 'route': '/IntrinsicWidget'},
   {'title': 'TextWidget', 'route': '/textWidget'},
   {'title': 'ToolTip', 'route': '/toolTip_wrap'},
+  {'title': 'Visibility', 'route': '/visibility'},
 ];

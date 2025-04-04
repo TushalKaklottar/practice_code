@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/modules/aspectRatio/aspect_ratio_widget.dart';
-import 'package:untitled/modules/expanded/expanded_View.dart';
+import 'package:untitled/modules/expanded/expanded_view.dart';
 import 'package:untitled/modules/hero/hero_widget.dart';
 import 'package:untitled/modules/row/row_view.dart';
 import 'package:untitled/modules/stateless_widget/stateless_view.dart';
+import 'package:untitled/modules/visibility/visibility_widget.dart';
 import 'core/app_color.dart';
 import 'modules/IntrinsicWidget/Intrinsic_widget.dart';
 import 'modules/column/column_widget.dart';
@@ -11,6 +12,7 @@ import 'modules/container_sizedBox/container_sizedBox.dart';
 import 'modules/flexible/flexible_view.dart';
 import 'modules/grid_widget/grid_view.dart';
 import 'modules/home/home_view.dart';
+import 'modules/inkwell/inkWell.dart';
 import 'modules/listView/listView_widget.dart';
 import 'modules/stack/stack_view.dart';
 import 'modules/text/text_widget.dart';
@@ -49,6 +51,8 @@ class MyApp extends StatelessWidget {
         '/IntrinsicWidget': (context) => const IntrinsicWidget(),
         '/textWidget': (context) => const TextWidget(),
         '/toolTip_wrap': (context) => const ToolTipWidget(),
+        '/inkWell_Widget': (context) => const InkWellWidget(),
+        '/visibility': (context) => const VisibilityWidget(),
       },
     );
   }
