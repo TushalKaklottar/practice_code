@@ -1,5 +1,6 @@
 // difference between SizedBox vs Container
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled/core/app_color.dart';
 
 class SizedVsContainer extends StatelessWidget {
@@ -13,7 +14,7 @@ class SizedVsContainer extends StatelessWidget {
         title: const Text("SizedBox vs Container"),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(6),
+        padding: EdgeInsets.all(16.h),
         child: Column(
           children: [
             SingleChildScrollView(
@@ -22,24 +23,24 @@ class SizedVsContainer extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(22), // Andar ka gap
+                    padding: EdgeInsets.all(22.h),
                     color: Colors.blue,
                     child: const Text('Hello'),
                   ),
-                  const SizedBox(
-                    width: 10,
+                  SizedBox(
+                    width: 10.w,
                   ),
                   Container(
-                    margin: const EdgeInsets.all(17), // Bahar ka gap
+                    margin: EdgeInsets.all(17.h), // Bahar ka gap
                     color: Colors.green,
-                    child: Text('Hello'),
+                    child: const Text('Hello'),
                   ),
-                  const SizedBox(
-                    width: 10,
+                  SizedBox(
+                    width: 10.h,
                   ),
                   Container(
-                    height: 200,
-                    width: 100,
+                    height: 200.w,
+                    width: 100.h,
                     color: AppColors.primary,
                     child: const Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,12 +53,12 @@ class SizedVsContainer extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    width: 10,
+                  SizedBox(
+                    width: 10.w,
                   ),
                   Container(
-                    height: 200,
-                    width: 100,
+                    height: 200.w,
+                    width: 100.h,
                     color: AppColors.primary,
                     child: const Column(
                       crossAxisAlignment: CrossAxisAlignment.center,

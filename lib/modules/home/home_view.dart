@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/app_exports.dart';
 import 'package:untitled/core/app_color.dart';
 import '../../widgets/custom_button.dart';
 
@@ -16,9 +17,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColors.primary,
-        title: const Text(
+        title: Text(
           "My App",
-          style: TextStyle(color: AppColors.background),
+          style: TextStyle(color: AppColors.background, fontSize: 20.sp),
         ),
         actions: [
           IconButton(
@@ -71,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 10, bottom: 10),
+        padding: EdgeInsets.only(top: 10.h, bottom: 10.h),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(
               decelerationRate: ScrollDecelerationRate.fast),
@@ -111,4 +112,5 @@ final List<Map<String, String>> buttonList = [
   {'title': 'TextWidget', 'route': '/textWidget'},
   {'title': 'ToolTip', 'route': '/toolTip_wrap'},
   {'title': 'Visibility', 'route': '/visibility'},
+  {'title': 'Spacer', 'route': '/spacer'},
 ];

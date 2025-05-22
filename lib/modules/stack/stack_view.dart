@@ -6,8 +6,7 @@ class StackView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double heights = MediaQuery.of(context).size.height;
-    double widths = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.oranges,

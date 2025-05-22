@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:untitled/core/app_color.dart';
+import 'package:untitled/app_exports.dart';
 
 class FlexibleView extends StatefulWidget {
   const FlexibleView({super.key});
@@ -20,27 +19,24 @@ class _FlexibleViewState extends State<FlexibleView> {
           style: TextStyle(color: AppColors.white),
         ),
       ),
-      body: Row(
+      body: Column(
         children: [
-          Flexible(
-            child: Container(
-              height: 100,
-              color: Colors.blue,
-              child: const Center(child: Text('Flexible 2x')),
-            ),
-          ),
-          Flexible(
-            child: Container(
-              height: 100,
-              color: Colors.green,
-              child: const Center(child: Text('Flexible 1x')),
-            ),
-          ),
+          /// 🔵 Fixed height header
           Container(
-            width: 100, // Fixed width
-            height: 100,
-            color: Colors.red,
-            child: const Center(child: Text('Fixed')),
+            height: 100.h,
+            color: Colors.blue,
+          ),
+
+          Flexible(
+            child: Container(
+              color: Colors.red,
+            ),
+          ),
+
+          /// 🟢 Fixed bottom bar
+          Container(
+            height: 300.h,
+            color: Colors.green,
           ),
         ],
       ),

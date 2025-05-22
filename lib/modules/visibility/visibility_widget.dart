@@ -22,7 +22,7 @@ class _VisibilityWidgetState extends State<VisibilityWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Visibility(
-            visible: isVisible, // true -> show, false -> hide
+            visible: isVisible,
             child: Container(
               padding: const EdgeInsets.all(20),
               color: Colors.blue,
@@ -34,7 +34,7 @@ class _VisibilityWidgetState extends State<VisibilityWidget> {
           ElevatedButton(
             onPressed: () {
               setState(() {
-                isVisible = !isVisible; // Toggle visibility
+                isVisible = !isVisible;
               });
             },
             child: Text(isVisible ? "Hide" : "Show"),
